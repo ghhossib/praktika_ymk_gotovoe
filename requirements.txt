@@ -1,0 +1,6 @@
+pymysql
+peewee
+bcrypt
+docxtpl
+flask
+flask-login
