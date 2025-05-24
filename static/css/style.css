@@ -1,0 +1,542 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style:none;
+}
+.name{
+    position: relative;
+    text-align:  center;
+    top: 130px;
+    color: #5D5C60;
+}
+.window{
+    width: 325px;
+    height: 329px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0,0,0,25%);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 146px;
+}
+.login{
+    width: 252px;
+    height: 33px;
+    position: relative;
+    top: 42px;
+    left: 30px;
+    border-radius: 10px;
+    border-color: #5D5C60;
+    text-align: center;
+}
+.password{
+    width: 252px;
+    height: 33px;
+    position: relative;
+    top: 72px;
+    left: 30px;
+    border-radius: 10px;
+    border-color: #5D5C60;
+    text-align: center;
+}
+.ssylka{
+    position: relative;
+    top: 100px;
+    left: 30px;
+    text-decoration: none;
+    color: #62A7DA;
+}
+.vhod{
+    position: relative;
+    top: 100px;
+    left: 100px;
+
+}
+.vhod button{
+    width: 78px;
+    height: 28px;
+    border-radius: 7px;
+    color: white;
+    background-color: #62A7DA;
+    border-color: #62A7DA;
+}
+.window_hr{
+    position: relative;
+    top: 120px;
+    width: 290px;
+}
+.zapis{
+    position: relative;
+    top: 140px;
+    left: 30px;
+
+
+
+}
+.zapis button{
+    height: 28px;
+    border-radius: 7px;
+}
+
+
+.window2{
+    width: 325px;
+    height: 359px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0,0,0,25%);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 146px;
+}
+.login2{
+    width: 252px;
+    height: 33px;
+    position: relative;
+    top: 42px;
+    left: 30px;
+    border-radius: 10px;
+    border-color: #5D5C60;
+}
+.password2{
+    width: 252px;
+    height: 33px;
+    position: relative;
+    top: 62px;
+    left: 30px;
+    border-radius: 10px;
+    border-color: #5D5C60;
+}
+.password32{
+    width: 252px;
+    height: 33px;
+    position: relative;
+    top: 82px;
+    left: 30px;
+    border-radius: 10px;
+    border-color: #5D5C60;
+}
+.vhod2 button{
+    position: relative;
+    top: 100px;
+    left: 80px;
+    width: 150px;
+    height: 28px;
+    border-radius: 7px;
+    color: white;
+    background-color: #62A7DA;
+    border-color: #62A7DA;
+}
+.window_hr2{
+    width: 280px;
+    position: relative;
+    top: 110px;
+}
+.zapis2{
+    position: relative;
+    top: 130px;
+    left: 30px;
+}
+.zapis2 button{
+    height: 28px;
+    border-radius: 7px;
+}
+
+
+
+
+
+
+
+
+header{
+
+    background-color: white;
+    width: auto;
+    height: 50px;
+    box-shadow: 4px 4px 10px rgba(0,0,0,25%);
+}
+.out{
+    font-size: 25px;
+    text-align: right;
+    padding-right: 5px;
+
+}
+.ramka-1{
+    width: 870px;
+    border-radius: 7px;
+    border-style: solid; /* стиль рамки в виде сплошной линии */
+    border-width: 1px; /* толщина рамки */
+    border-color: #A8A8A8;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 50px;
+    display: table;
+}
+
+.ramka{
+    width: 870px;
+    height: auto;
+    border-radius: 7px;
+    border-style: solid; /* стиль рамки в виде сплошной линии */
+    border-width: 1px; /* толщина рамки */
+    border-color: #A8A8A8;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 50px;
+    display: table;
+}
+.kyrs1{
+
+    width: 783px;
+
+    margin-left: 70px;
+    margin-right: auto;
+    position: relative;
+    top: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+
+}
+.kyrs2{
+
+    width: 783px;
+
+    margin-left: 70px;
+    margin-right: auto;
+    position: relative;
+    top: 70px;
+    display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}
+.kyrs3{
+
+    width: 783px;
+
+    margin-left: 70px;
+    margin-right: auto;
+    position: relative;
+    top: 110px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr)
+}
+.kyrs4{
+
+    width: 783px;
+
+    margin-left: 70px;
+    margin-right: auto;
+    position: relative;
+    top: 140px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr)
+}
+
+.group_box{
+    width: 131px;
+    height: 45px;
+    border-radius: 10px;
+    border-color: #62A7DA;
+    background-color: #62A7DA;
+    font-size: 20px;
+    color: white;
+    transition: 0.5s;
+}
+.group_box:hover{
+    background-color: #A8A8A8;
+}
+h2{
+    font-size: 40px;
+    color: #5D5C60;
+    text-align: left;
+    position: relative;
+    left: 20px;
+    top: 13px;
+}
+.h2k{
+    position: relative;
+    top: 50px;
+}
+.h3k{
+    position: relative;
+    top: 90px
+}
+.h4k{
+    position: relative;
+    top: 120px
+}
+.vnb{
+    position: absolute;
+    left: 70px;
+    top: 1080px;
+    width: 131px;
+    height: 45px;
+    border-radius: 10px;
+    border-color: #A8A8A8;
+    font-size: 20px;
+}
+
+ol{
+    font-size: 30px;
+    position: relative;
+
+}
+.list_students li{
+    margin-top: 20px;
+
+}
+
+input[type="checkbox"]{
+    transform: scale(2);
+    accent-color: #62A7DA;
+    position: static;
+    accent-color: #62A7DA;
+    margin-right:100px;
+
+}
+
+li{
+    color: #5D5C60;
+}
+hr{
+    border-color: #EBEBEB;
+}
+.hli{
+    position: relative;
+    right: 43px;
+    width: 853px;
+    border-color: #ebebeb30;
+}
+.namegr{
+    position: relative;
+    text-align: center;
+
+    top: 50px;
+    color: #5D5C60;
+}
+.checkselect input[type="checkbox"]{
+    transform: scale(1.5);
+    accent-color: #62A7DA;
+
+    position: absolute;
+    right: 0px;
+    left: 240px;
+    top: 9px;
+
+    accent-color: #62A7DA;
+}
+
+
+.student-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.student-name {
+    flex-grow: 1; /* Занимает всё доступное пространство */
+}
+
+.student-checkbox {
+    margin-left: 10px; /* Отступ от текста */
+}
+
+.hvk{
+    position: relative;
+    top: 120px
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 250px;
+    margin-top:80px;
+}
+a {
+    text-decoration: none;
+}
+.gogo{
+    position: relative;
+    top: 90px;
+    left: 1160px;
+    width: 230px;
+    height: 43px;
+    background-color: #62A7DA;
+    border: #62A7DA;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+.out2{
+    color: #62A7DA;
+}
+.namegr2{
+    display: flex;
+    justify-content: center;
+    padding-right: 100px;
+    color: #5D5C60;
+    font-size: 50px;
+}
+.checkselect {
+	position: relative;
+	display: inline-block;
+	min-width: 200px;
+	text-align: left;
+}
+
+.checkselect-control select {
+	position: relative;
+	display: inline-block;
+	width: 300px;
+	margin: 0;
+	padding-left: 5px;
+	height: 42px;
+	right: 19px;
+}
+.checkselect-over {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	cursor: pointer;
+}
+.checkselect-popup {
+	display: none;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	width: 300px;
+	height: auto;
+	max-height: 200px;
+	position: absolute;
+	top: 100%;
+	left: 0px;
+	border: 1px solid #dadada;
+	border-top: none;
+	background: #fff;
+	z-index: 9999;
+	overflow: auto;
+	user-select: none;
+}
+.checkselect label {
+	position: relative;
+	display: block;
+	margin: 0;
+	padding: 4px 6px 4px 25px;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 1.1;
+	cursor: pointer;
+}
+.checkselect-popup input {
+	position: absolute;
+	top: 5px;
+	left: 8px;
+	margin: 0 !important;
+	padding: 0;
+}
+.checkselect-popup label:hover {
+	background: #03a2ff;
+	color: #fff;
+}
+.checkselect-popup fieldset {
+	display: block;
+	margin:  0;
+	padding: 0;
+	border: none;
+}
+.checkselect-popup fieldset input {
+	left: 15px;
+}
+.checkselect-popup fieldset label {
+	padding-left: 32px;
+}
+.checkselect-popup legend {
+	display: block;
+	margin: 0;
+	padding: 5px 8px;
+	font-weight: 700;
+	font-size: 1em;
+	line-height: 1.1;
+}
+.checkselect{
+    position: relative;
+    left: 20px;
+    bottom: 7px;
+
+}
+
+
+.zapolnit{
+    font-size: 25px;
+}
+img{
+    position: relative;
+
+}
+.gogo2{
+    position: relative;
+    top: 90px;
+    left: 1160px;
+    width: 230px;
+    height: 60px;
+    background-color: #62A7DA;
+    border: #62A7DA;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+.hli2{
+    width: 820px;
+    height:30px;
+    position: relative;
+    left: 20px;
+    top: 10px;
+}
+.zzzz {
+    width: 250px;
+    height: 40px;
+    margin: 30px;
+    text-align: center;
+    border-radius: 10px;
+    border-color: #5D5C60;
+}
+p{
+    font-size: 25px;
+    color: #5D5C60;
+
+}
+.file{
+    width: 160px;
+    height: 35px;
+    background-color: white;
+    border-radius: 10px;
+    border-color: #A8A8A8;
+    color: #A8A8A8;
+    position: relative;
+    top: 60px;
+    left: 500px;
+}
+.sohra{
+    width: 160px;
+    height: auto;
+    background-color: #62A7DA;
+    border-radius: 10px;
+    border-color: #62A7DA;
+    color: white;
+    position: relative;
+    top: 60px;
+    left: 650px;
+}
+.rykOrg h3 {
+padding-left: 20px;
+}
+#rykYch h3 {
+padding-left: 20px;
+}

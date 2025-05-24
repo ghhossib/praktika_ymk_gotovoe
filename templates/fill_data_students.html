@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% block content %}
+    <style>
+        .student-item {
+            margin: 10px 0;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+        .student-item label {
+            margin-left: 10px;
+        }
+    </style>
+<body>
+    <header>
+        <a href="{{ url_for('logout') }}" class="out2"><p class="out">Выйти</p></a>
+    </header>
+
+    <form method="POST"
+          action="{% if student %}{{ url_for('generate_single_doc', student_id=student.id) }}{% else %}{{ url_for('generate_multiple_docs') }}{% endif %}"
+          enctype="multipart/form-data"
+          id="docsForm">
+    <main class="ramka">
+        <section class="namestudent">
+            <h2>{% if student %}{{ student.surename }} {{ student.name }}{% else %}Групповая генерация{% endif %}</h2>
+            <hr class="hli2">
+        </section>
+
+        <!-- Общие данные -->
+        <section class="rykOrg">
+            <h3>Данные организации</h3>
+            <div class="form-group">
+                <input class="zzzz" type="text" name="company_name" placeholder="Наименование организации" required>
+                <input class="zzzz" type="text" name="company_address" placeholder="Адрес организации" required>
+            </div>
+            <div class="form-group">
+                <input class="zzzz" type="text" name="start_day" placeholder="День начала" required>
+                <input class="zzzz" type="text" name="start_month" placeholder="Месяц начала" required>
+                <input class="zzzz" type="text" name="end_day" placeholder="День окончания" required>
+                <input class="zzzz" type="text" name="end_month" placeholder="Месяц окончания" required>
+            </div>
+            <hr class="hli2">
+        </section>
+
+
+
+        <!-- Дополнительные поля -->
+        <section class="rykYch" id="rykYch">
+            <h3>Методический Руководитель</h3>
+            <div class="form-group">
+                <input class="zzzz" type="text" name="manager_lastname" placeholder="Фамилия" required>
+                <input class="zzzz" type="text" name="manager_firstname" placeholder="Имя" required>
+                <input class="zzzz" type="text" name="manager_middle_name" placeholder="Отчество" required>
+            </div>
+            <hr class="hli2">
+        </section>
+
+        <!-- Кнопки -->
+        <section class="knopki">
+            <button type="submit" class="sohra">
+                {% if student %}Сгенерировать документы{% else %}Сгенерировать для выбранных{% endif %}
+            </button>
+        </section>
+    </main>
+    </form>
+
+    <script>
+        document.getElementById('docsForm').addEventListener('submit', function(e) {
+            // Проверка обязательных полей
+            const required = this.querySelectorAll('[required]');
+            let isValid = true;
+
+            required.forEach(field => {
+                if (!field.value.trim()) {
+                    field.style.borderColor = 'red';
+                    isValid = false;
+                } else {
+                    field.style.borderColor = '';
+                }
+            });
+
+            // Для группового режима проверяем выбор студентов
+            {% if not student %}
+                const checked = document.querySelectorAll('input[name="student_ids"]:checked');
+                if (checked.length === 0) {
+                    alert('Выберите хотя бы одного студента!');
+                    isValid = false;
+                }
+            {% endif %}
+
+            if (!isValid) {
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<body>
+    <header>
+        <a href="{{ url_for('logout') }}" class="out2"><p class="out">Выйти</p></a>
+    </header>
+    <div class="ramka-1">
+        <ol class="list_students">
+            <p class="namegr2">{{ group_name }}</p>
+            {% for student in students %}
+            <li>
+                <div class="btns-edit" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; padding-right: 20px;">
+                    <span style="flex: 1; min-width: 200px;">
+                        {{loop.index}}. {{ student.surename }} {{ student.name }} {{ student.middle_name }}
+                    </span>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <a class="zapolnit" href="{{ url_for('zapolnenie_dokumentov', student_id=student.id) }}">
+                            Заполнить
+                        </a>
+                    </div>
+                </div>
+                <hr class="hli">
+            </li>
+            {% endfor %}
+        </ol>
+    </div>
+
+
+    <script src="https://snipp.ru/cdn/jquery/2.1.1/jquery.min.js"></script>
+    <script src="{{url_for('static', filename='js/js.js')}}"></script>
+</body>
+{% endblock %}

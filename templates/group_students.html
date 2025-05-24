@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% block content %}
+<body>
+    <header>
+        <a href="/logout"><p class="out">Выйти</p></a>
+    </header>
+        
+    <div class="ramka container">
+        <!-- 1 курс -->
+        <h2>1 курс</h2>
+        <div class="kyrs1 row mb-4 g-3">
+            {% for group in groups if group.course == '1' %}
+            <div class="col-md-3 col-sm-4 col-6">
+                <a href="/list_students/{{group.id}}"  class="btn btn-primary group_box">{{group.name}}</a>
+            </div>
+            {% else %}
+            <div class="col-12">
+                <p>Нет групп для 1 курса</p>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- 2 курс -->
+        <h2 class="h2k">2 курс</h2>
+        <div class="kyrs2 row mb-4 g-3">
+            {% for group in groups if group.course == '2' %}
+            <div class="col-md-3 col-sm-4 col-6">
+                <a href="/list_students/{{group.id}}" class="btn btn-primary group_box">{{group.name}}</a>
+            </div>
+            {% else %}
+            <div class="col-12">
+                <p>Нет групп для 2 курса</p>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- 3 курс -->
+        <h2 class="h3k">3 курс</h2>
+        <div class="kyrs3 row mb-4 g-3">
+            {% for group in groups if group.course == '3' %}
+            <div class="col-md-3 col-sm-4 col-6">
+                <a href="/list_students/{{group.id}}" class="btn btn-primary group_box">{{group.name}}</a>
+            </div>
+            {% else %}
+            <div class="col-12">
+                <p>Нет групп для 3 курса</p>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- 4 курс -->
+        <h2 class="h4k">4 курс</h2>
+        <div class="kyrs4 row mb-4 g-3">
+            {% for group in groups if group.course == '4' %}
+            <div class="col-md-3 col-sm-4 col-6">
+                <a href="/list_students/{{group.id}}" class="btn btn-primary group_box">{{group.name}}</a>
+            </div>
+            {% else %}
+            <div class="col-12">
+                <p>Нет групп для 4 курса</p>
+            </div>
+            {% endfor %}
+        </div>
+        <!-- Внебюджет -->
+     <h2 class="hvk" style="margin-top: 60px;" >Внебюджет</h2>
+    <div class="kyrs4 row mb-4 g-3">
+
+            <div class="col-md-3 col-sm-4 col-6">
+               <a href="#" class="btn btn-secondary vnb-btn">Внебюджет</a>
+            </div>
+    </div>
+    </div>
+</body>
+{% endblock %}

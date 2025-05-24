@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block content %}
+<body>
+<header>
+        <a href="{{ url_for('logout') }}" class="out2"><p class="out">Выйти</p></a>
+    </header>
+    <div class="container">
+        <h1 class="namegr">{{ group_name }}</h1>
+
+        {% if students %}
+            <form id="studentsForm" action="{{ url_for('data_students_multiple') }}" method="POST">
+                <div class="ramka-1">
+                    <ol class="list_students">
+                        {% for student in students %}
+                            <li class="student-item">
+                                {{ loop.index }}.
+                                <span class="student-name">
+                                    {{ student.surename }} {{ student.name }} {{ student.middle_name }}
+                                </span>
+                                <input type="checkbox" name="selected_students" value="{{ student.id }}" class="student-checkbox">
+                            </li>
+                            <hr class="hli">
+                        {% endfor %}
+                    </ol>
+                </div>
+                <div class="button-container">
+                    <button type="submit" id="nextButton" class="btn btn-primary group_box">Далее</button>
+                </div>
+            </form>
+        {% else %}
+            <div class="ramka-1" style="text-align: center; padding: 20px;">
+                <p style="font-size: 20px; color: #5D5C60;">В этой группе нет студентов</p>
+            </div>
+        {% endif %}
+    </div>
+
+    <script>
+        document.getElementById('nextButton').addEventListener('click', function(e) {
+            const selectedCheckboxes = document.querySelectorAll('input[name="selected_students"]:checked');
+            if (selectedCheckboxes.length === 0) {
+                e.preventDefault();
+                alert('Пожалуйста, выберите хотя бы одного студента');
+            }
+        });
+    </script>
+</body>
+{% endblock %}
